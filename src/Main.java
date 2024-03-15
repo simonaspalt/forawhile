@@ -1,8 +1,8 @@
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         System.out.println("========== uzd 1 ==========");
 
-      //  Sukurkite ciklą kuris atspausdintų 10 kartų žodį “labas”.
+        //  Sukurkite ciklą kuris atspausdintų 10 kartų žodį “labas”.
 
         for (int i = 0; i < 10; i++) {
             System.out.println("labas");
@@ -44,8 +44,8 @@ public class Main {
 
         //  Atspausdinkite kas antrą skaičių nuo 10 iki 50 (porinius);
 
-        for (int i = 9; i <50 ; i++) {
-            if (i % 2 != 0){
+        for (int i = 9; i < 50; i++) {
+            if (i % 2 != 0) {
                 continue;
             }
             System.out.println(i);
@@ -57,15 +57,30 @@ public class Main {
         // jo nespausdinkite. ( naudokite continue.) (atspausdinti visus porinus skaičius, išskyrus tuos
         // kurie dalinasi iš 10 be liekanos)
 
-        for (int i = 9; i <50 ; i++) {
-            if (i % 2 != 0){
+        for (int i = 9; i < 50; i++) {
+            if (i % 2 != 0) {
                 continue;
             }
-            if (i % 10 == 0){
+            if (i % 10 == 0) {
                 continue;
             }
             System.out.println(i);
         }
+
+        System.out.println("========== uzd 8 ==========");
+
+        // Sukurkite ciklą kuris suktųsi nuo 0 iki 20. Suskaičiuokite,
+        // kiek kartų kintamasis i turėjo porinę reikšmę;
+
+int counter = -1;
+        for (int i = 0; i < 20; i++) {
+            if (i % 2 == 0){
+                counter++;
+            }
+
+        }
+
+        System.out.println(" i buvo porinis " + counter + " kartu");
 
 
 
