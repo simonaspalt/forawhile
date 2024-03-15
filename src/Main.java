@@ -72,9 +72,9 @@ public class Main {
         // Sukurkite ciklą kuris suktųsi nuo 0 iki 20. Suskaičiuokite,
         // kiek kartų kintamasis i turėjo porinę reikšmę;
 
-int counter = -1;
+        int counter = -1;
         for (int i = 0; i < 20; i++) {
-            if (i % 2 == 0){
+            if (i % 2 == 0) {
                 counter++;
             }
 
@@ -83,7 +83,20 @@ int counter = -1;
         System.out.println(" i buvo porinis " + counter + " kartu");
 
 
+        System.out.println("========== uzd 9 ==========");
+        //Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių trumpesnių nei 5 simboliai,
+        // ir kiek ilgesnių nei 7 simboliai. (du skaičiavimai)
 
+
+        counter = 0;
+
+        for (int i = 0; i < plants.length; i++) {
+            plant = (String) plants[i];
+            if (plant.length < 5) {
+                counter++;
+            }
+        }
+        System.out.println("masyve yra " + counter + " zodziu trumpesniu nei 5 simboliai");
 
 
     }
