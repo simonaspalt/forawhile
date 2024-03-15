@@ -98,6 +98,16 @@ public class Main {
             }
         }
         System.out.println("masyve yra " + counter + " zodziu trumpesniu nei 5 simboliai");
+        counter = 0;
+        for (int i = 0; i < plants.length; i++) {
+            String plant = (String) plants[i];
+            int w = plant.length();
+            if (w > 7) {
+                counter++;
+            }
+        }
+        System.out.println("massyve yra " + counter + " zodziu ilgesniu nei 7 simboliai");
+
 
 
     }
