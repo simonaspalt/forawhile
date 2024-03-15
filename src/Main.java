@@ -57,7 +57,15 @@ public class Main {
         // jo nespausdinkite. ( naudokite continue.) (atspausdinti visus porinus skaičius, išskyrus tuos
         // kurie dalinasi iš 10 be liekanos)
 
-
+        for (int i = 9; i <50 ; i++) {
+            if (i % 2 != 0){
+                continue;
+            }
+            if (i % 10 == 0){
+                continue;
+            }
+            System.out.println(i);
+        }
 
 
 
