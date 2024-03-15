@@ -92,7 +92,7 @@ public class Main {
 
         for (int i = 0; i < plants.length; i++) {
             String plant = (String) plants[i];
-           int w = plant.length();
+            int w = plant.length();
             if (w < 5) {
                 counter++;
             }
@@ -108,6 +108,21 @@ public class Main {
         }
         System.out.println("massyve yra " + counter + " zodziu ilgesniu nei 7 simboliai");
 
+        System.out.println("========== uzd 10 ==========");
+
+        ///Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai
+        // bet trumpesnių  nei 10 simboliai. (tarp 5 ir 10 simbolių ilgio)
+
+        counter = 0;
+        for (int i = 0; i < plants.length; i++) {
+            String plant = (String) plants[i];
+            int w = plant.length();
+            if (w > 5 && w < 10) {
+                counter++;
+            }
+        }
+
+        System.out.println(" masyve yra " + counter + " zodziu tarp 5 ir 10 simbolių ilgio");
 
 
     }
