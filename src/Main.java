@@ -91,8 +91,9 @@ public class Main {
         counter = 0;
 
         for (int i = 0; i < plants.length; i++) {
-            plant = (String) plants[i];
-            if (plant.length < 5) {
+            String plant = (String) plants[i];
+           int w = plant.length();
+            if (w < 5) {
                 counter++;
             }
         }
