@@ -178,7 +178,7 @@ public class Main {
         // 24 / 4 = 6 how many * into line
         // ((24 - (6 * 2)) / 2) + 1 = 7  how many * collum
 
-        int x = 4; // x is given number of * in perimeter
+        int x = 24; // x is given number of * in perimeter
         if (x % 4 == 0) {
             int line = (x / 4) + 1; // how many * in a line
             int collum = line; // how many * in a collum
@@ -188,7 +188,7 @@ public class Main {
                 }
                 System.out.println();
             }
-         //   System.out.println(collum);
+            //   System.out.println(collum);
         } else {
             int line = (x / 4) + 1;
             int collum = line + 1;
@@ -198,8 +198,46 @@ public class Main {
                 }
                 System.out.println();
             }
-          //  System.out.println(collum);
+            //  System.out.println(collum);
         }
+
+        System.out.println("========== sud 5a ==========");
+
+        //Metam monetą. Monetos kritimo rezultatą imituojam Math.random() funkcija,
+        // kur 0 yra herbas, o 1 - skaičius. Monetos metimo rezultatus išvedame į ekraną
+        // atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas. Suprogramuokite
+        // tris skirtingus scenarijus kai monetos metimą stabdome:
+        //a Iškritus herbui;
+        //b Tris kartus iškritus herbui;
+        //c Tris kartus iš eilės iškritus herbui;
+
+        while (true) {
+            int a = (int) (Math.round(Math.random()));
+            if (a == 0) {
+                System.out.println("H");
+                break;
+            } else {
+                System.out.println("S");
+
+            }
+        }
+
+        System.out.println("========== sud 5b ==========");
+        counter = 0;
+        while (true) {
+            int a = (int) (Math.round(Math.random()));
+            if (a == 0) {
+                System.out.println("H");
+                counter++;
+            } else {
+                System.out.println("S");
+            }
+            if (counter == 3) {
+                break;}
+        }
+
+        System.out.println("========== sud 5c ==========");
+
 
 
     }
