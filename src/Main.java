@@ -355,32 +355,40 @@ public class Main {
 //* * * * * * *
 
 
-        x = 6; // x is given number of * in perimeter
+        x = 26;                                                   // x is given number of * in perimeter
         if (x % 4 == 0) {
-            int line = (x / 4) +1; // how many * in a line
-            int collum = line; // how many * in a collum
-            for (int i = 0; i < collum; i++) {           //
-                for (int p = 0; p < line; p++) {
-                    if ( i == p ){
+            int line = (x / 4) +1;                                  // how many * in a line
+            int collum = line;                                      // how many * in a collum
+            for (int i = 0; i < collum; i++) {
+                counter = line;
+                for (int p = 0; p < line; p++) {                        // i== p for increasing order replaced signs
+                    if ( i == p || i == (counter -1)){                //counter - for decreasing order replaced signs
                         System.out.print("0 ");
+                        counter--;
                     }
 
                     else {
                         System.out.print("* ");
+                        counter--;
                     }
                 }
-                System.out.println();
+                System.out.println();                           /// start new line
             }
             //   System.out.println(collum);
         } else {
             int line = (x / 4) + 1;
-            int collum = line;
+            int collum = line +1;
             for (int i = 0; i < collum; i++) {
+                counter = line;
                 for (int p = 0; p < line; p++) {
-                    if ( i == p ){
+                    if ( i == p || i == (counter -1)){
                         System.out.print("0 ");
+                        counter--;
                     }
-                    System.out.print("* ");
+                   else {
+                        System.out.print("* ");
+                        counter--;
+                    }
                 }
                 System.out.println();
             }
