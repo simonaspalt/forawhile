@@ -308,12 +308,40 @@ public class Main {
                 int hit = (int) (Math.round((Math.random() * 15)) + 5);
                 nail = nail - hit;
                 hitcounter++;
+                System.out.print("hit ");
             }
             totalhits = totalhits + hitcounter;
+            System.out.println();
             System.out.println("nail " + i + " needed " + hitcounter + " hits");
+            System.out.println("=========================");
         }
         System.out.println("Total hits needed: " + totalhits);
 
+
+        System.out.println("******************* sud 8b *****************************************************");
+
+        totalhits = 0;
+        for (int i = 1; i < 6; i++) {
+            nail = 85;
+            int hitcounter = 0;
+            while (nail > 0) {
+                int hitchance = (int) (Math.round(Math.random()));
+                if (hitchance == 0) {
+                    hitcounter++;
+                    System.out.print("miss ");
+                    continue;
+                }
+                int hit = (int) (Math.round((Math.random() * 10)) + 20);
+                nail = nail - hit;
+                hitcounter++;
+                System.out.print("hit ");
+            }
+            totalhits = totalhits + hitcounter;
+            System.out.println();
+            System.out.println("nail " + i + " needed " + hitcounter + " hits");
+            System.out.println("=====================");
+        }
+        System.out.println("Total hits needed: " + totalhits);
 
 
     }
