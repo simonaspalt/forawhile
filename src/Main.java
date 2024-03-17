@@ -178,12 +178,13 @@ public class Main {
         // 24 / 4 = 6 how many * into line
         // ((24 - (6 * 2)) / 2) + 1 = 7  how many * collum
 
-        int x = 24; // x is given number of * in perimeter
+        int x = 26; // x is given number of * in perimeter
         if (x % 4 == 0) {
-            int line = (x / 4) + 1; // how many * in a line
+            int line = (x / 4); // how many * in a line
             int collum = line; // how many * in a collum
             for (int i = 0; i < collum; i++) {
                 for (int p = 0; p < line; p++) {
+
                     System.out.print("* ");
                 }
                 System.out.println();
@@ -342,6 +343,49 @@ public class Main {
             System.out.println("=====================");
         }
         System.out.println("Total hits needed: " + totalhits);
+
+        System.out.println("******************* sud 4 *****************************************************");
+//Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
+//* * * * * * *
+//* * * * * * *
+//* * * * * * *
+//* * * * * * *
+//* * * * * * *
+//* * * * * * *
+//* * * * * * *
+
+
+        x = 6; // x is given number of * in perimeter
+        if (x % 4 == 0) {
+            int line = (x / 4) +1; // how many * in a line
+            int collum = line; // how many * in a collum
+            for (int i = 0; i < collum; i++) {           //
+                for (int p = 0; p < line; p++) {
+                    if ( i == p ){
+                        System.out.print("0 ");
+                    }
+
+                    else {
+                        System.out.print("* ");
+                    }
+                }
+                System.out.println();
+            }
+            //   System.out.println(collum);
+        } else {
+            int line = (x / 4) + 1;
+            int collum = line;
+            for (int i = 0; i < collum; i++) {
+                for (int p = 0; p < line; p++) {
+                    if ( i == p ){
+                        System.out.print("0 ");
+                    }
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+            //  System.out.println(collum);
+        }
 
 
     }
