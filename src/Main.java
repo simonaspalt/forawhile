@@ -234,7 +234,8 @@ public class Main {
                 System.out.println("S");
             }
             if (counter == 3) {
-                break;}
+                break;
+            }
         }
 
         System.out.println("========== sud 5c ==========");
@@ -250,9 +251,55 @@ public class Main {
                 counter = 0;
             }
             if (counter == 3) {
-                break;}
+                break;
+            }
         }
+
+        System.out.println("========== sud 6 ==========");
+        //Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20,
+        // Kazys surenka taškų kiekį nuo 5 iki 25. Vienoje eilutėje išvesti žaidėjų vardus
+        // su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”. Taškų kiekį generuokite
+        // funkcija ​Math.random()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus.
+        // Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+
+        //      System.out.println(kazysround);
+        //     System.out.println(petrasround);
+        int petrasscore = 0;
+        int kazysscore = 0;
+        while (true) {
+            int kazysround = (int) (Math.round((Math.random() * 20)) + 5);
+            int petrasround = (int) (Math.round((Math.random() * 10)) + 10);
+            petrasscore = petrasscore + petrasround;
+            kazysscore = kazysscore + kazysround;
+            if (kazysround > petrasround) {
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround + " points. Partiją laimėjo: Kazys" + " Petras total: " + petrasscore + " Kazys total: " + kazysscore);
+            }
+            if (kazysround < petrasround) {
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround + " points. Partiją laimėjo: Petras" + " Petras total: " + petrasscore + " Kazys total: " + kazysscore);
+            }
+            if (kazysround == petrasround) {
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround + " points. Lygiosios" + " Petras total: " + petrasscore + " Kazys total: " + kazysscore);
+            }
+            if (petrasscore >= 222 && kazysscore < 222){
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround +" Petras wins game with " + petrasscore + " points! Kazys total: " + kazysscore);
+                break;
+            }
+            if (kazysscore >= 222 && petrasscore < 222){
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround +" Kazys wins game with " + kazysscore + " points! Petras total: " + petrasscore);
+                break;
+            }
+            if (kazysscore >= 222 && petrasscore >= 222){
+                System.out.println("Draw! Kazys total: " + kazysscore + " points. Petras total: " + petrasscore);
+                break;
+            }
+        }
+        System.out.println("========== sud 7 ==========");
+
+
+
+
 
 
     }
 }
+
