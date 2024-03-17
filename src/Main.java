@@ -223,6 +223,7 @@ public class Main {
         }
 
         System.out.println("========== sud 5b ==========");
+        //b Tris kartus iškritus herbui;
         counter = 0;
         while (true) {
             int a = (int) (Math.round(Math.random()));
@@ -237,7 +238,20 @@ public class Main {
         }
 
         System.out.println("========== sud 5c ==========");
-
+        //c Tris kartus iš eilės iškritus herbui;
+        counter = 0;
+        while (true) {
+            int a = (int) (Math.round(Math.random()));
+            if (a == 0) {
+                System.out.println("H");
+                counter++;
+            } else {
+                System.out.println("S");
+                counter = 0;
+            }
+            if (counter == 3) {
+                break;}
+        }
 
 
     }
