@@ -280,23 +280,39 @@ public class Main {
             if (kazysround == petrasround) {
                 System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround + " points. Lygiosios" + " Petras total: " + petrasscore + " Kazys total: " + kazysscore);
             }
-            if (petrasscore >= 222 && kazysscore < 222){
-                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround +" Petras wins game with " + petrasscore + " points! Kazys total: " + kazysscore);
+            if (petrasscore >= 222 && kazysscore < 222) {
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround + " Petras wins game with " + petrasscore + " points! Kazys total: " + kazysscore);
                 break;
             }
-            if (kazysscore >= 222 && petrasscore < 222){
-                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround +" Kazys wins game with " + kazysscore + " points! Petras total: " + petrasscore);
+            if (kazysscore >= 222 && petrasscore < 222) {
+                System.out.println("Petras gets: " + petrasround + " points. Kazys gets: " + kazysround + " Kazys wins game with " + kazysscore + " points! Petras total: " + petrasscore);
                 break;
             }
-            if (kazysscore >= 222 && petrasscore >= 222){
+            if (kazysscore >= 222 && petrasscore >= 222) {
                 System.out.println("Draw! Kazys total: " + kazysscore + " points. Petras total: " + petrasscore);
                 break;
             }
         }
-        System.out.println("========== sud 7 ==========");
+        System.out.println("========== sud 8a ==========");
+//Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija. Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+//“ a Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+//“ b Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė
+// (pasinaudokite Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
 
-
-
+        int nail = 85;
+        int totalhits = 0;
+        for (int i = 1; i < 6; i++) {
+            nail = 85;
+            int hitcounter = 0;
+            while (nail > 0) {
+                int hit = (int) (Math.round((Math.random() * 15)) + 5);
+                nail = nail - hit;
+                hitcounter++;
+            }
+            totalhits = totalhits + hitcounter;
+            System.out.println("nail " + i + " needed " + hitcounter + " hits");
+        }
+        System.out.println("Total hits needed: " + totalhits);
 
 
 
