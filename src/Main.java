@@ -125,5 +125,29 @@ public class Main {
         System.out.println(" masyve yra " + counter + " zodziu tarp 5 ir 10 simbolių ilgio");
 
 
+        System.out.println("========== sud 1 ==========");
+
+        //Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus
+        // tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni
+        // nei 275 turi būti atspausdinti skliausteliuose” [ ] “
+        counter = 0;
+        for (int i = 0; i < 300; i++) {
+            int num = (int) (Math.round(Math.random() * 300));
+            if (num < 275) {
+                System.out.print(num + " ");
+            } else {
+                System.out.print("[" + num + "] ");
+            }
+            if (num > 150) {
+                counter++;
+            }
+
+        }
+        System.out.println();
+        System.out.println("there are " + counter + " numbers larger than 150");
+
+
+
+
     }
 }
