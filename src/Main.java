@@ -1,3 +1,5 @@
+import java.util.function.DoubleToIntFunction;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("========== uzd 1 ==========");
@@ -147,6 +149,57 @@ public class Main {
         System.out.println("there are " + counter + " numbers larger than 150");
 
 
+        System.out.println("========== sud 2 ==========");
+        //Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi
+        // iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio
+        // neturi būti.
+
+        for (int i = 1; i <= 3000; i++) {
+            if (i < 3000 - 77) {
+                if (i % 77 == 0) {
+                    System.out.print(i + ",");
+                }
+            } else if (i % 77 == 0) {
+                System.out.print(i);
+            }
+        }
+
+
+        System.out.println("========== sud 3 ==========");
+        //Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
+        //* * * * * * * * * * *
+        //* * * * * * * * * * *
+        //* * * * * * * * * * *
+        //* * * * * * * * * * *
+        //* * * * * * * * * * *
+        //* * * * * * * * * * *
+        //* * * * * * * * * * *
+// KRATINES SUDARO HAS TO BE EVEN NUMBER!!!!!!!!! EVEN BETTER IF IT IS NUMBER % 4 == 0
+        // 24 / 4 = 6 how many * into line
+        // ((24 - (6 * 2)) / 2) + 1 = 7  how many * collum
+
+        int x = 4; // x is given number of * in perimeter
+        if (x % 4 == 0) {
+            int line = (x / 4) + 1; // how many * in a line
+            int collum = line; // how many * in a collum
+            for (int i = 0; i < collum; i++) {
+                for (int p = 0; p < line; p++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+         //   System.out.println(collum);
+        } else {
+            int line = (x / 4) + 1;
+            int collum = line + 1;
+            for (int i = 0; i < collum; i++) {
+                for (int p = 0; p < line; p++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+          //  System.out.println(collum);
+        }
 
 
     }
