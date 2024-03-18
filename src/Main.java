@@ -29,7 +29,7 @@ public class Main {
 
         // Atspausdinkite kiekvieną 3čio uždavinio augalą atskiroje eilutėje.
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < plants.length; i++) {
             System.out.println(plants[i]);
         }
 
@@ -38,7 +38,7 @@ public class Main {
         //Atspausdinkite 3čio uždavinio kiekvieną augalą pradedant nuo paskutinio,
         // ir baigiant pirmuoju. (atvirkščias ciklas).
 
-        for (int i = 9; i >= 0; i--) {
+        for (int i = (plants.length - 1); i >= 0; i--) {
             System.out.println(plants[i]);
         }
 
@@ -59,10 +59,7 @@ public class Main {
         // jo nespausdinkite. ( naudokite continue.) (atspausdinti visus porinus skaičius, išskyrus tuos
         // kurie dalinasi iš 10 be liekanos)
 
-        for (int i = 9; i < 50; i++) {
-            if (i % 2 != 0) {
-                continue;
-            }
+        for (int i = 10; i <= 50; i += 2) {
             if (i % 10 == 0) {
                 continue;
             }
@@ -74,12 +71,11 @@ public class Main {
         // Sukurkite ciklą kuris suktųsi nuo 0 iki 20. Suskaičiuokite,
         // kiek kartų kintamasis i turėjo porinę reikšmę;
 
-        int counter = -1;
-        for (int i = 0; i < 20; i++) {
+        int counter = 0;
+        for (int i = 0; i <= 20; i++) {
             if (i % 2 == 0) {
                 counter++;
             }
-
         }
 
         System.out.println(" i buvo porinis " + counter + " kartu");
@@ -355,45 +351,75 @@ public class Main {
 //* * * * * * *
 
 
-        x = 26;                                                   // x is given number of * in perimeter
+        x = 100;                                                   // x is given number of * in perimeter
         if (x % 4 == 0) {
-            int line = (x / 4) +1;                                  // how many * in a line
+            int line = (x / 4) + 1;                                  // how many * in a line
             int collum = line;                                      // how many * in a collum
             for (int i = 0; i < collum; i++) {
                 counter = line;
                 for (int p = 0; p < line; p++) {                        // i== p for increasing order replaced signs
-                    if ( i == p || i == (counter -1)){                //counter - for decreasing order replaced signs
+                    if (i == p || i == (counter - 1)) {                //counter - for decreasing order replaced signs
                         System.out.print("0 ");
                         counter--;
-                    }
-
-                    else {
+                    } else {
                         System.out.print("* ");
                         counter--;
                     }
                 }
                 System.out.println();                           /// start new line
             }
-            //   System.out.println(collum);
+
         } else {
             int line = (x / 4) + 1;
-            int collum = line +1;
+            int collum = line + 1;
             for (int i = 0; i < collum; i++) {
                 counter = line;
                 for (int p = 0; p < line; p++) {
-                    if ( i == p || i == (counter -1)){
+                    if (i == p || i == (counter - 1)) {
                         System.out.print("0 ");
                         counter--;
-                    }
-                   else {
+                    } else {
                         System.out.print("* ");
                         counter--;
                     }
                 }
                 System.out.println();
             }
-            //  System.out.println(collum);
         }
+        System.out.println("******************* sud 7 *****************************************************");
+        //Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas), kurio aukštis 21 eilutė.
+
+        int line = 21;                                  // how many * in a line
+        int collum = line;// how many * in a collum
+        int counter1 = 10;
+        int counter2 = 10;
+        int counter3 = -10;
+        int counter4 = 30;
+        for (int i = 0; i < collum; i++) {
+
+            for (int p = 0; p < line; p++) {
+                if ( i <= 10 && p <= counter1 && p >= counter2 ) {                        // i== p for increasing order replaced signs
+                    System.out.print("0 ");                                           //counter - for decreasing order replaced signs
+
+                }
+                else if ( i > 10 && p >= counter3 && p <= counter4) {
+                    System.out.print("0 ");
+                }
+                else {
+                   System.out.print("* ");}
+
+                }
+            counter1++;
+            counter2--;
+            counter3++;
+            counter4--;
+            System.out.println();                           /// start new line
+            }
+        //}
+
+
+
+
 
 
     }
