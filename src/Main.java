@@ -160,7 +160,7 @@ public class Main {
             }
         }
 
-
+        System.out.println();
         System.out.println("========== sud 3 ==========");
         //Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
         //* * * * * * * * * * *
@@ -398,24 +398,47 @@ public class Main {
         for (int i = 0; i < collum; i++) {
 
             for (int p = 0; p < line; p++) {
-                if ( i <= 10 && p <= counter1 && p >= counter2 ) {                        // i== p for increasing order replaced signs
-                    System.out.print("0 ");                                           //counter - for decreasing order replaced signs
-
-                }
-                else if ( i > 10 && p >= counter3 && p <= counter4) {
+                if (i <= 10 && p <= counter1 && p >= counter2) {
                     System.out.print("0 ");
+                } else if (i > 10 && p >= counter3 && p <= counter4) {
+                    System.out.print("0 ");
+                } else {
+                    System.out.print("* ");
                 }
-                else {
-                   System.out.print("* ");}
-
-                }
+            }
             counter1++;
             counter2--;
             counter3++;
             counter4--;
             System.out.println();                           /// start new line
+        }
+        System.out.println("******************* sud 9 *****************************************************");
+        //Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais.
+        // Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu,
+        // palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs).
+        // Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.
+
+        String numbers = "";
+        String[] anumbers = new String[49];
+        for (int i = 0; i <50; i++) {
+
+            while (true) {
+                int num = (int) (Math.round((Math.random() * 199)) + 1);
+                for (int p = 0; p <= anumbers.length; p++) {
+                    if (anumbers[p] == num){
+                        continue;
+                    }
+                    else {
+                        break;
+                    }
+                }
+                anumbers[i] = num;
             }
-        //}
+            }
+
+
+
+
 
 
 
